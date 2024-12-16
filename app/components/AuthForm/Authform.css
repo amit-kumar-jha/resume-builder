@@ -1,0 +1,72 @@
+/* Global styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Fullscreen container */
+.fullscreen-flex {
+  display: flex;
+  height: 100vh;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .signup-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 90%; /* Adjust width for mobile */
+    padding: 1.5rem; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white; /* Background color for the card */
+  }
+
+  .signup-card h2 {
+    font-size: 2rem; /* Responsive font size for heading */
+  }
+
+  .signup-card input {
+    font-size: 1rem; /* Responsive font size for inputs */
+    padding: 0.75rem; /* Adjust padding for inputs */
+  }
+
+  .signup-card .text-lg {
+    font-size: 1.125rem; /* Responsive font size for paragraphs */
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .signup-card {
+    width: 50%; /* Full width for larger screens */
+    background-color: white; /* Ensuring background for larger screens */
+  }
+
+  .left-form {
+    /* Left Side - Form Styles */
+    animation: slide-in 0.7s ease-in-out; /* Add animation if needed */
+  }
+
+  .right-informative {
+    width: 50%; /* Right side styles */
+  }
+}
+
+/* Optional animation keyframes */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

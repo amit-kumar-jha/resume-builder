@@ -1,0 +1,100 @@
+.contact-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.contact-content {
+  line-height: 1.6;
+}
+
+.contact-content h2 {
+  font-size: 2rem;
+  color: #2b6cb0; /* Tailwind CSS blue-600 */
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-content p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  align-items: center; /* Center the form items */
+}
+
+.form-group {
+  width: 100%; /* Make the form group full width */
+  margin-bottom: 20px; /* Add some space between form groups */
+  text-align: left; /* Align label and input to the left */
+}
+
+.form-group label {
+  display: block; /* Block to position label above input */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Make inputs full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+}
+
+.submit-button {
+  background-color: #2b6cb0; /* Tailwind CSS blue-600 */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Make the button full width */
+}
+
+.submit-button:hover {
+  background-color: #2c5282; /* Darker blue on hover */
+}
+
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info-list li {
+  margin: 10px 0;
+}
+
+.contact-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+}
+
+.contact-footer p {
+  font-size: 0.9rem;
+}

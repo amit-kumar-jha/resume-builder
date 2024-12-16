@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.form {
+  @apply flex flex-col items-center gap-5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.form {
+  @apply flex flex-col items-center gap-5;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.input {
+  @apply flex items-center justify-between px-5 py-3 rounded-xl cursor-pointer shadow-xl;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.input-field {
+  @apply w-[300px] max-sm:w-full bg-transparent outline-none;
+}
+
+.button {
+  @apply w-full px-5 py-3 mt-5 mb-7 rounded-xl cursor-pointer bg-indigo-700 hover:bg-indigo-400 text-white text-body-bold;
+}
+
+.button-primary-modal {
+  @apply w-full px-3 py-2 mt-5 rounded-xl cursor-pointer bg-indigo-700 hover:bg-indigo-400 text-white text-body-bold;
+}
+
+.button-secondary-modal {
+  @apply w-full px-3 py-2 mt-5 rounded-xl  cursor-pointer bg-white-1 hover:bg-stale-400 text-black text-body-bold border border-gray-400;
+}
+.link {
+  @apply text-base-medium hover:text-blue-3 hover:underline;
+}
+
+.bottom-bar {
+  @apply fixed bottom-0 z-50 w-full flex justify-between items-center px-5 py-2 bg-gray-800 text-white py-6 sm:hidden;
 }

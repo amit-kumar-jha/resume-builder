@@ -1,0 +1,83 @@
+/* .dashboard-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  z-index: 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+} */
+
+.dashboard-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow due to animations */
+}
+
+.content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  gap: 2rem;
+  width: 90%; /* Set a maximum width */
+  max-width: 800px; /* Limit the width on larger screens */
+  padding: 1rem; /* Add padding for small devices */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Add smooth scaling on hover */
+}
+.card-privacy {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  /* width: 80%; */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Add smooth scaling on hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .card {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    width: 95%; /* Adjust width for very small screens */
+  }
+
+  .card {
+    padding: 1rem; /* Further reduce padding */
+    font-size: 0.9rem; /* Slightly decrease font size */
+  }
+}
